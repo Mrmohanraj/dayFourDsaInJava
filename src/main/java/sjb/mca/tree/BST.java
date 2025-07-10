@@ -21,9 +21,42 @@ public class BST {
 		return node;
 	}
 	
-	void inorder() {
-		inorderNode(root);
+	
+	
+	void preorder() {
+		preorderNode(root);
 	}
+
+	  void preorderNode(TreeNode node) {
+		// TODO Auto-generated method stub
+		  if(node!=null)
+			 {
+				
+			  System.out.println(node.data);
+				 preorderNode(node.left);
+				 preorderNode(node.right);
+				 
+			 }
+		  
+		  
+		
+	}
+	  void postorder() {
+		  postorderNode(root);
+			  
+		  
+	  }
+
+	  void postorderNode(TreeNode node) {
+		// TODO Auto-generated method stub
+		  
+			 postorderNode(node.left);
+			 postorderNode(node.right);
+			 System.out.println(node.data);
+	}
+	  void inorder() {
+			inorderNode(root);
+		}
 
 	 void inorderNode(TreeNode node) {
 		// TODO Auto-generated method stub
